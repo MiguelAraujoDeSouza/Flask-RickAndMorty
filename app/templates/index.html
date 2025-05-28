@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página Inicial</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao ZapLignos</h1>
+        
+        <form method="POST">
+            <label for="user">Nome Usuário:</label>
+            <input type="text" name="user" id="user">
+            <input type="submit" name="Confirmar" id="Confirmar" value="Entrar">
+        </form>
+
+        <form action="/usuario" method="get">
+            <input type="submit" value="Abrir Mensagens">
+        </form>
+    </div>
+</body>
+</html>
