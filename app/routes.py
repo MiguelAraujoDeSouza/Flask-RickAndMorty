@@ -2,11 +2,12 @@ from flask import Blueprint, render_template, request, redirect, url_for
 from .service import manda_mensagem, pegar_mensagens
 bp = Blueprint("chat", __name__)
 
+# Rota para verificar a saúde da API
 @bp.route("/health", methods=["GET"])
 def health():
     return "OK", 200
 
-
+# Rota para pegar o nick do usuario
 @bp.route("/", methods=["GET", "POST"])
 def home():
     global nick
@@ -15,6 +16,7 @@ def home():
         print(nick)
     return render_template("index.html")
 
+# Rota para o chat do usuário
 @bp.route("/usuario", methods=["GET", "POST"])
 def usuario():
     if request.method == "POST":

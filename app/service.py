@@ -1,6 +1,6 @@
 from .database import conecta, encerra_conexao
 
-
+# Função para mandar mensagem para o banco de dados
 def manda_mensagem(mensagem, usuario):
     try:
         conn = conecta()
@@ -15,7 +15,7 @@ def manda_mensagem(mensagem, usuario):
     finally:
         encerra_conexao(conn)
 
-
+# Função para pegar mensagens do banco de dados
 def pegar_mensagens():
     try:
         conn = conecta()
