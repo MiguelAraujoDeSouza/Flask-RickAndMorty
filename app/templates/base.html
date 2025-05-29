@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block titulo %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='base.css') }}">
+</head>
+<body>
+    <h1>{% block cabecalho %}{% endblock %}</h1>
+
+    <form method="POST">
+        <label for="mensagem">Digite sua mensagem:</label><br>
+        <input type="text" id="mensagem" name="mensagem"><br><br>
+        <input type="submit" name="enviar" value="Enviar">
+    </form>
+    <form method="GET">
+        <input type="submit" name="Recarregar mensagens" value="Recarregar mensagens">
+    </form>
+    <h2>Janela do Chat</h2>
+    <pre>
+{% for linha in historico %}
+{{ linha|safe }}
+{% endfor %}
+    </pre>
+
+<br>
+<form action="/">
+    <input type="submit" value="Voltar">
+</form>
+</body>
+</html>
