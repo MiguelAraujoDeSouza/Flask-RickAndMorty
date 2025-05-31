@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, redirect, url_for
-from .service import manda_mensagem, pegar_mensagens
+from .service import manda_mensagem, pegar_mensagens, manda_mensagem_ia
 bp = Blueprint("chat", __name__)
 
 # Rota para verificar a saúde da API
@@ -21,6 +21,7 @@ def home():
 def usuario():
     if request.method == "POST":
         manda_mensagem(request.form["mensagem"], str(nick))
+        manda_mensagem_ia(request.form["mensagem"])
         return redirect(url_for("chat.usuario"))
     elif request.method == "GET":
         mensagens = pegar_mensagens()

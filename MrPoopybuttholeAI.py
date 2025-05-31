@@ -10,13 +10,6 @@ from langchain.prompts import PromptTemplate
 import sys
 from langchain.schema import HumanMessage, SystemMessage
 
-# Validação de parâmetros
-if len(sys.argv) != 2:
-    print("Usage: python MrPoopybuttholeAI.py <user_question>")
-    sys.exit(1)
-
-
-
 # Configuração básica do Gemini
 load_dotenv() # Obtendo a chave do gemini
 api_key = os.getenv("GEMINI_API_KEY")
@@ -84,11 +77,6 @@ agent = initialize_agent(
 )
 
 
-# Pergunta do usário e resposta do agente
-pergunta = sys.argv[1]
-resposta = agent.invoke(pergunta)["output"]
-print("\n\nResposta do agente enviesado 🤖👨‍🦲:\n" + resposta)
-
 
 # Criação do juiz
 juiz = ChatGoogleGenerativeAI(
@@ -110,13 +98,15 @@ Se tiver problemas, diga “⚠️ Reprovado” e proponha uma versão melhorada
 '''
 
 
-def avaliar_resposta(pergunta, resposta_tutor):
+def obter_resposta_da_ia(pergunta: str) -> str:
+    resposta = agent.invoke(pergunta)["output"]
+    return resposta
+
+
+def avaliar_resposta_do_juiz(pergunta: str, resposta_da_ia: str) -> str:
     mensagens = [
         SystemMessage(content=prompt_juiz),
-        HumanMessage(content=f"Pergunta do aluno: {pergunta}\n\nResposta do tutor: {resposta_tutor}")
+        HumanMessage(content=f"Pergunta do aluno: {pergunta}\n\nResposta do tutor: {resposta_da_ia}")
     ]
-    return juiz.invoke(mensagens).content
-
-
-avaliacao = avaliar_resposta(pergunta, resposta)
-print("\nAvaliação do juiz:\n", avaliacao)
+    avaliacao = juiz.invoke(mensagens).content
+    return avaliacao
