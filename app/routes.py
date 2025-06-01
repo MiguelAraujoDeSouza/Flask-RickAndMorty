@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, redirect, url_for
-from .service import manda_mensagem, pegar_mensagens, manda_mensagem_ia
+from .service import manda_mensagem, pegar_mensagens, manda_mensagem_ia, apagar_mensagens
 bp = Blueprint("chat", __name__)
 
 # Rota para verificar a saúde da API
@@ -19,10 +19,15 @@ def home():
 # Rota para o chat do usuário
 @bp.route("/usuario", methods=["GET", "POST"])
 def usuario():
+    ## n tem metodo delete ent tive que improvisar no postkkkkkk 
     if request.method == "POST":
-        manda_mensagem(request.form["mensagem"], str(nick))
-        manda_mensagem_ia(request.form["mensagem"])
-        return redirect(url_for("chat.usuario"))
+        print(request.form["mensagem"])
+        if request.form["mensagem"] == "Limpar mensagens":
+            apagar_mensagens()
+            return redirect(url_for("chat.usuario"))
+        else:
+            manda_mensagem(request.form["mensagem"], str(nick))
+            return redirect(url_for("chat.usuario"))
     elif request.method == "GET":
         mensagens = pegar_mensagens()
         return render_template("usuario.html", historico=mensagens)

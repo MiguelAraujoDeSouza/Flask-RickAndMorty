@@ -60,3 +60,17 @@ def pegar_mensagens():
         return []
     finally:
         encerra_conexao(conn)
+
+# Função para apagar mensagens do banco de dados
+def apagar_mensagens():
+    try:
+        conn = conecta()
+        cursor = conn.cursor()
+        comando = "DELETE FROM mensagens where 1=1;"
+        cursor.execute(comando)
+        conn.commit()
+        print("Mensagens apagadas com sucesso!")
+    except Exception as e:
+        print(f"Erro ao apagar mensagens: {e}")
+    finally:
+        encerra_conexao(conn)
