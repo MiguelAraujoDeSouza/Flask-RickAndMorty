@@ -2,14 +2,15 @@
 <html>
 <head>
     <title>Página Inicial</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="../static/index.css">
 </head>
-<body>
+<body style="background-image: url('../images/portal-rick-and-morty.gif'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
     <div class="container">
+        <img src="../images/rick and morty.png" alt="Rick and Morty Logo" style="width: 250px; margin-bottom: 20px;">
         <h1>Bem-vindo ao ZapLignos</h1>
         
         <form method="POST">
-            <label for="user">Nome Usuário:</label>
+            <label for="user">Nome Usuario:</label>
             <input type="text" name="user" id="user">
             <input type="submit" name="Confirmar" id="Confirmar" value="Entrar">
         </form>
@@ -17,6 +18,8 @@
         <form action="/usuario" method="get">
             <input type="submit" value="Abrir Mensagens">
         </form>
+
+        <img src="../images/Pickle-Rick-PNG-Isolated-HD.png" alt="Pickle Rick" style="width: 100px; margin-top: 20px;">
     </div>
 </body>
 </html>
