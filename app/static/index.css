@@ -6,8 +6,6 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.8); /* fallback */
-}
 
 /* Container principal */
 .container {
