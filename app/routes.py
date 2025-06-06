@@ -27,6 +27,7 @@ def usuario():
             return redirect(url_for("chat.usuario"))
         else:
             manda_mensagem(request.form["mensagem"], str(nick))
+            manda_mensagem_ia(request.form["mensagem"])
             return redirect(url_for("chat.usuario"))
     elif request.method == "GET":
         mensagens = pegar_mensagens()
