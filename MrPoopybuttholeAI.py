@@ -96,6 +96,8 @@ Critérios:
 #Faça sua resposta em uma unica linha e bem breve
 #Se a resposta for boa, diga “✅ Aprovado” e explique por quê.
 #Se tiver problemas, diga “⚠️ Reprovado” e proponha uma versão melhorada.
+#Ofereça um exemplo de resposta melhorada.
+#SEMPRE responda sem quebra de linha
 '''
 
 
