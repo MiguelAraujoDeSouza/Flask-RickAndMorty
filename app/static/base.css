@@ -68,6 +68,15 @@ pre {
     color: #ccff00;
     box-shadow: 0px 2px 10px rgba(0, 255, 204, 0.5);
 }
+font{
+    color: #ccff00;
+    font-size: 16px;
+    margin: 20px;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 100px;
+    background-color: grey;
+}
 
 /* Botão de voltar */
 form[action="/"] input[type="submit"] {

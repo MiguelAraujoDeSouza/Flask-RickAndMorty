@@ -93,8 +93,9 @@ Critérios:
 - Está clara para o nível médio técnico?
 - O próximo passo sugerido está bem formulado?
 
-Se a resposta for boa, diga “✅ Aprovado” e explique por quê.
-Se tiver problemas, diga “⚠️ Reprovado” e proponha uma versão melhorada.
+#Faça sua resposta em uma unica linha e bem breve
+#Se a resposta for boa, diga “✅ Aprovado” e explique por quê.
+#Se tiver problemas, diga “⚠️ Reprovado” e proponha uma versão melhorada.
 '''
 
 
