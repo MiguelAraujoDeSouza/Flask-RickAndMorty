@@ -1,0 +1,8 @@
+Flask~=3.1.1
+psycopg2~=2.9.10
+dotenv~=0.9.9
+python-dotenv~=1.1.0
+google~=3.0.0
+protobuf~=5.29.5
+langchain-google-genai~=2.0.10
+langchain~=0.3.25
