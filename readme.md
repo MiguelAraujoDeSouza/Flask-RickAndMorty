@@ -58,12 +58,17 @@ Gerencia as **mensagens** trocadas com o chatbot:
    - Crie um arquivo `.env` na raiz do projeto.
    - Adicione a seguinte linha:
      ```
-     GEMINI_API_KEY=<SUA_CHAVE_API>
+     user=
+     password=
+     host=
+     port=
+     database=
+     GEMINI_API_KEY=
      ```
 
 4. **Execute o servidor Flask**:
    ```bash
-   flask run
+   python main.py
    ```
 
 5. **Acesse no navegador**:
