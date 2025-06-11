@@ -1,0 +1,69 @@
+/* Estilo geral */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+/* Container principal */
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #00ffcc, 0 0 25px #39ff14;
+    text-align: center;
+    width: 350px;
+    color: #ccff00;
+}
+
+/* Título */
+h1 {
+    font-size: 26px;
+    color: #00ffcc;
+    text-shadow: 2px 2px #000;
+    margin-bottom: 20px;
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Campo de entrada */
+input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #0d0d0d;
+    color: #ccff00;
+}
+
+/* Botões */
+input[type="submit"] {
+    background-color: #00ffcc;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #00e6b8;
+}
+
+/* Espaçamento entre formulários */
+form + form {
+    margin-top: 10px;
+}

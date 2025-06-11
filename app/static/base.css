@@ -1,0 +1,88 @@
+/* Estilo geral */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fallback if bg image fails */
+}
+
+/* Título */
+h1 {
+    color: #00ffcc;
+    font-size: 28px;
+    text-shadow: 2px 2px #000;
+}
+
+/* Formulários */
+form {
+    margin: 10px auto;
+    padding: 10px;
+}
+
+/* Inputs e botões */
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #0d0d0d;
+    color: white;
+}
+
+input[type="submit"] {
+    background-color: #00ffcc;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #00e6b8;
+}
+
+/* Janela do chat */
+h2 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #00ffcc;
+    text-shadow: 1px 1px #000;
+}
+
+/* Mensagens */
+pre {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 15px;
+    width: 80%;
+    max-height: 300px;
+    overflow-y: auto;
+    margin: auto;
+    text-align: left;
+    font-size: 14px;
+    color: #ccff00;
+    box-shadow: 0px 2px 10px rgba(0, 255, 204, 0.5);
+}
+font{
+    color: #ccff00;
+    font-size: 16px;
+    margin: 20px;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 100px;
+    background-color: grey;
+}
+
+/* Botão de voltar */
+form[action="/"] input[type="submit"] {
+    background-color: #ff3b30;
+}
+
+form[action="/"] input[type="submit"]:hover {
+    background-color: #e02a1c;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block titulo %}{% endblock %}</title>
+    <link rel="stylesheet" href="../static/base.css">
+</head>
+<body style="background-image: url('../static/images/portal-rick-and-morty.gif'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+    <img src="../static/images/rick and morty.png" alt="Rick and Morty Logo" style="width: 300px; margin-bottom: 20px;">
+
+    <h1>{% block cabecalho %}{% endblock %}</h1>
+
+    <form method="POST">
+        <label for="mensagem" style="color: white;">Digite sua mensagem:</label><br>
+        <input type="text" id="mensagem" name="mensagem"><br><br>
+        <input type="submit" name="enviar" value="Enviar">
+    </form>
+
+    <form method="POST">
+        <input type="submit" name="mensagem" value="Limpar mensagens">
+    </form>
+    <h2>Janela do Chat</h2>
+    <pre>
+{% for linha in historico %}
+{{ linha|safe }}
+{% endfor %}
+    </pre>
+
+    <img src="../static/images/Pickle-Rick-PNG-Isolated-HD.png" alt="Pickle Rick" style="width: 100px; margin-top: 20px;">
+
+    <br>
+    <form action="/">
+        <input type="submit" value="Voltar">
+    </form>
+</body>
+</html>
